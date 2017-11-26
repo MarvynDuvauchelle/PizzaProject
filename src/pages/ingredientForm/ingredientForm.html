@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <div class="container">
+    <h1>Ajouter un ingrédient</h1>
+    <div *ngIf="ingredientForm">
+      <form [formGroup]="ingredientForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label>Nom</ion-label>
+          <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Poids</ion-label>
+          <ion-textarea formControlName="weight"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label>Prix</ion-label>
+          <ion-input type="number" formControlName="price"></ion-input>
+        </ion-item>
+        <button ion-button *ngIf="id" type="submit" [disabled]="!ingredientForm.valid">Modifier</button>
+        <button ion-button type="submit" class="btn btn-success" *ngIf="!id" [disabled]="!ingredientForm.valid">Ajouter</button>
+        <button ion-button color="danger" (click)="onDelete()" *ngIf="id">Supprimer</button>
+      </form>
+    </div>
+  </div>
+</ion-content>

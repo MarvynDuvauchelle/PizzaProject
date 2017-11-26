@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <div class="container">
+    <h1>Pizza Form</h1>
+    <div *ngIf="pizzaForm">
+      <form [formGroup]="pizzaForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label>Nom</ion-label>
+          <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Description</ion-label>
+          <ion-textarea formControlName="desc"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label>Image</ion-label>
+          <ion-input type="text" formControlName="picture"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Prix</ion-label>
+          <ion-input type="number" formControlName="price"></ion-input>
+        </ion-item>
+        <h4>Ingrédients</h4>
+        <ion-item *ngFor="let ingredient of ingredients">
+            <ion-label>{{ingredient.name}}</ion-label>
+            <ion-checkbox id="{{ingredient._id}}"></ion-checkbox>
+        </ion-item>
+        <button ion-button type="submit" class="btn btn-success">Ajouter</button>
+      </form>
+    </div>
+  </div>
+</ion-content>

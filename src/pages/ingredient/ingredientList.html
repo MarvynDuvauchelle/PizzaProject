@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ingrédients</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <h4>Liste des ingrédients</h4>
+  <button ion-button class="btn btn-success" (click)="goIngredientForm()">Nouveau</button>
+  <ion-list>
+    <div *ngFor="let ingredient of ingredients">
+      <button ion-item (click)="goIngredientForm(ingredient._id)">
+        {{ingredient.name}}
+      </button>
+    </div>
+  </ion-list>
+</ion-content>

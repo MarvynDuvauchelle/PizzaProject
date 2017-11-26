@@ -1,0 +1,68 @@
+// Récupérer toute les pizzas
+https://pizzaposey-cloned-marvyn.c9users.io/pizza
+
+
+// Récupérer une pizza
+https://pizzaposey-cloned-marvyn.c9users.io/pizza/:id
+
+
+// Ajouter une pizza
+https://pizzaposey-cloned-marvyn.c9users.io/pizza
+  //Paramètres en post :
+{
+  "name": "Fromage",
+  "desc": "Pizza très très bonne",
+  "price": 14,
+  "picture": "pizza-royale.jpeg",
+  "ingredients": [ "5a0dac413135c7470bf0d2c3", "5a11ae119cc6484ce7670f55" ]
+}
+
+
+// Modifier une pizza
+https://pizzaposey-cloned-marvyn.c9users.io/pizza/:id
+  //Paramètres en post :
+{
+  "name": "Fromage",
+  "desc": "Pizza très très bonne",
+  "price": 14,
+  "picture": "pizza-royale.jpeg",
+  "ingredients": [ "5a0dac413135c7470bf0d2c3", "5a11ae119cc6484ce7670f55" ]
+}
+
+
+// Supprimer une pizza
+https://pizzaposey-cloned-marvyn.c9users.io/pizza/:id
+
+
+
+
+// Récupérer tous les ingrédients
+https://pizzaposey-cloned-marvyn.c9users.io/ingredient
+
+
+// Récupérer un ingrédient
+https://pizzaposey-cloned-marvyn.c9users.io/ingredient/:id
+
+
+// Ajouter un ingrédient
+https://pizzaposey-cloned-marvyn.c9users.io/ingredient
+  //Paramètres en post :
+{
+  "name": "Olive",
+  "weight": 200,
+  "price": 0.1
+}
+
+
+// Modifier un ingrédient
+https://pizzaposey-cloned-marvyn.c9users.io/ingredient/:id
+  //Paramètres en post :
+{
+  "name": "Olive",
+  "weight": 200,
+  "price": 0.1
+}
+
+
+// Supprimer un ingrédient
+https://pizzaposey-cloned-marvyn.c9users.io/ingredient/:id

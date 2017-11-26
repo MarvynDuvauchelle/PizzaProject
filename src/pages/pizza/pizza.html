@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pizza</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h3>{{pizza.name}}</h3>
+    <img src="{{pizza.picture}}">
+    <p>{{pizza.desc}}</p>
+
+    <h4>Ingrédients :</h4>
+       <ul *ngFor="let ingredient of pizza.ingredients">
+         <li>{{ingredient.name}}</li>
+       </ul> 
+
+    <p> Prix : {{pizza.price}}</p>
+</ion-content>
