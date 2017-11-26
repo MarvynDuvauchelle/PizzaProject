@@ -55,6 +55,7 @@ export class IngredientFormPage {
     this.ingredientService.deleteIngredient(this.id).then(data => {
       console.log(data);
     });
+    this.navCtrl.push(HomePage);
   }
   
 }
